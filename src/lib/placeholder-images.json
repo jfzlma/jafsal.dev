@@ -1,0 +1,52 @@
+{
+  "placeholderImages": [
+    {
+      "id": "profile-picture",
+      "description": "A professional headshot of Jafsal M A.",
+      "imageUrl": "/profile.png",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "trip-photo-1",
+      "description": "A scenic mountain landscape from a recent trip.",
+      "imageUrl": "https://images.unsplash.com/photo-1611080402167-ed75bae6df32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb3VudGFpbiUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjA4NTg3NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain landscape"
+    },
+    {
+      "id": "trip-photo-2",
+      "description": "A vibrant city street captured during travels.",
+      "imageUrl": "https://images.unsplash.com/photo-1453413453658-27fec8f43f29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaXR5JTIwc3RyZWV0fGVufDB8fHx8MTc2MDk4MTQyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city street"
+    },
+    {
+      "id": "trip-photo-3",
+      "description": "A serene beach at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1561571994-3c61c554181a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NjA5Nzk1NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beach sunset"
+    },
+    {
+      "id": "trip-photo-4",
+      "description": "A forest trail during a hiking trip.",
+      "imageUrl": "https://images.unsplash.com/photo-1720760585814-5c5280ea72d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmb3Jlc3QlMjB0cmFpbHxlbnwwfHx8fDE3NjA4NzQ5OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest trail"
+    },
+    {
+      "id": "car-photo-1",
+      "description": "A sporty hatchback on a winding road.",
+      "imageUrl": "https://images.unsplash.com/photo-1758249196848-64f023741750?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzcG9ydHklMjBjYXJ8ZW58MHx8fHwxNzYwOTgzMjg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sporty car"
+    },
+    {
+      "id": "car-photo-2",
+      "description": "A classic muscle car parked at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1615238359019-c8de4242e083?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtdXNjbGUlMjBjYXJ8ZW58MHx8fHwxNzYwOTgzMjg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "muscle car"
+    },
+    {
+      "id": "car-photo-3",
+      "description": "An off-road truck on a dirt path.",
+      "imageUrl": "https://images.unsplash.com/photo-1693253641085-2c7b1cf1bf1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxvZmZyb2FkJTIwdHJ1Y2t8ZW58MHx8fHwxNzYwOTgzMjg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "offroad truck"
+    }
+  ]
+}

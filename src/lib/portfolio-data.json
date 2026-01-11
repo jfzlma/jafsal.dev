@@ -1,0 +1,218 @@
+{
+  "profile": {
+    "name": "Jafsal M A",
+    "headline": "Data Engineer | Web Scraping | IoT Enthusiast",
+    "summary": "Software Engineer and Technical Lead with 6+ years of experience in large-scale data extraction and ingestion, specializing in resilient web crawlers for complex e-commerce, government, and regulatory sources, with strong expertise in Python, Java, Scrapy, distributed processing, and CI/CD.",
+    "links": {
+      "linkedIn": "https://linkedin.com/in/jfzlma",
+      "github": "https://github.com/jfzlma",
+      "email": "jfzlma@gmail.com",
+      "whatsapp": "+919633062855",
+      "instagram": "https://www.instagram.com/your_username",
+      "stackoverflow": "https://stackoverflow.com/users/your_userid",
+      "reddit": "https://www.reddit.com/user/your_username"
+    }
+  },
+  "skills": [
+    {
+      "title": "Programming & Scripting",
+      "icon": "Code",
+      "skills": [
+        "Python",
+        "C++",
+        "Golang",
+        "SQL",
+        "Bash/Shell"
+      ]
+    },
+    {
+      "title": "Web Scraping & Automation",
+      "icon": "Microscope",
+      "skills": [
+        "Scrapy",
+        "Selenium",
+        "BeautifulSoup",
+        "Requests",
+        "XPath",
+        "Appium",
+        "PlayWright"
+      ]
+    },
+    {
+      "title": "Data Engineering & Databases",
+      "icon": "Database",
+      "skills": [
+        "Pandas",
+        "Numpy",
+        "JSON",
+        "XML",
+        "Elasticsearch",
+        "Kibana",
+        "Cassandra",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "title": "Reverse Engineering & Security",
+      "icon": "ShieldCheck",
+      "skills": [
+        "Burp Suite",
+        "MitmProxy",
+        "Apktool",
+        "SSL Pinning Bypass"
+      ]
+    },
+    {
+      "title": "Cloud & IoT Platforms",
+      "icon": "Cloud",
+      "skills": [
+        "Azure IoT Hub",
+        "Azure IoT Edge",
+        "Azure DevOps",
+        "Firebase"
+      ]
+    },
+    {
+      "title": "DevOps & Tools",
+      "icon": "Cog",
+      "skills": [
+        "Docker",
+        "Jenkins",
+        "GitLab",
+        "GitHub",
+        "CI/CD",
+        "CMake",
+        "Cron"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "PST.AG",
+      "role": "Python Developer / Team Lead – Data Engineering & Web Scraping (Remote)",
+      "period": "2024 – Present",
+      "location": "Weimar, Germany (Remote)",
+      "description": [
+        "Designed and maintained scalable, production-grade web scraping and data ingestion systems using Python, Scrapy, Playwright, Selenium, and BeautifulSoup across heterogeneous sources.",
+        "Architected and maintained a large-scale scraping ecosystem of ~100 active production projects, crawling 400,000+ pages daily, while ensuring fault tolerance, anti-bot resilience, and data quality.",
+        "Optimized crawler performance, stability, and fault tolerance by handling dynamic content, DOM volatility, rate limiting, and anti-bot protections.",
+        "Deployed, versioned, and monitored spiders using Scrapyd and ScrapydWeb, enabling controlled releases and operational visibility.",
+        "Managed high-volume proxy rotation strategies (Oxylabs, Proxyrack, Webshare) to maintain high crawl success rates and minimize blocking.",
+        "Ensured data quality and schema consistency through validation, normalization, error handling, and structured outputs (JSON, XML, XLSX).",
+        "Collaborated with cross-functional stakeholders to deliver custom data acquisition solutions aligned with business requirements.",
+        "Lead and mentor a team of 4 Java developers, providing technical direction, task allocation, and code reviews.",
+        "Enforced coding standards, design patterns, and best practices across Java and data-processing components.",
+        "Collaborated with architects and product owners to translate requirements into scalable system designs.",
+        "Integrated Java and Python components into CI/CD workflows using GitLab-based version control.",
+        "Participated in Agile/Scrum ceremonies and tracked delivery via Jira.",
+        "Drove continuous improvement initiatives, including POCs, tooling enhancements, and performance optimizations."
+      ],
+      "skills": [
+        "Python",
+        "Scrapy",
+        "Playwright",
+        "Selenium",
+        "Pandas",
+        "Jira",
+        "GitLab",
+        "Proxy Management",
+        "Java",
+        "Scrapyd",
+        "NumPy",
+        "XML",
+        "ERPNext",
+        "Kettle",
+        "JBoss"
+      ]
+    },
+    {
+      "company": "Shopalyst Technologies",
+      "role": "Software Engineer II - Data Operations and Engineering",
+      "period": "2021 – 2024",
+      "location": "Trivandrum, Kerala, India",
+      "description": [
+        "Led development of scalable crawlers for global e-commerce platforms using Python (Scrapy, Requests, Selenium, BeautifulSoup) and Golang, supporting high-volume data ingestion.",
+        "Extended data extraction beyond the web by reverse-engineering Android applications, including SSL-pinned apps, to identify and consume internal APIs.",
+        "Used Apktool, Burp Suite, mitmproxy, and network inspection techniques to bypass SSL pinning and analyze encrypted traffic.",
+        "Automated mobile app crawling and testing pipelines using Appium, BrowserStack, and LambdaTest across emulators, real devices, and cloud environments.",
+        "Managed large-scale proxy infrastructure with Bright Data (Luminati) to support geographically distributed crawls.",
+        "Implemented data storage and messaging pipelines using Elasticsearch, Cassandra, RabbitMQ, ensuring scalability and fault tolerance.",
+        "Automated operational workflows using Bash scripting, Cron jobs, and Jenkins, reducing manual intervention and improving reliability.",
+        "Mentored junior engineers, enforced coding standards, and reviewed scraping logic to maintain data quality and system stability."
+      ],
+      "skills": [
+        "Python",
+        "Golang",
+        "Scrapy",
+        "Reverse Engineering",
+        "Appium",
+        "Elasticsearch",
+        "Cassandra",
+        "RabbitMQ",
+        "Burp Suite",
+        "mitmproxy"
+      ]
+    },
+    {
+      "company": "Tata Consultancy Services",
+      "role": "IoT Edge Developer",
+      "period": "2020 – 2021",
+      "location": "Kochi, Kerala, India",
+      "description": [
+        "Developed and maintained C++-based Azure IoT Edge modules for industrial gateways in collaboration with a European defense and shipbuilding client.",
+        "Integrated Azure IoT Hub and Azure IoT Edge for secure device-to-cloud communication.",
+        "Containerized edge workloads using Docker and built modules with CMake for cross-platform deployment.",
+        "Implemented CI/CD pipelines using Azure DevOps and Git, enabling automated builds and deployments.",
+        "Worked with industrial communication protocols (MODBUS) for real-time data acquisition from edge devices",
+        "Actively participated in Agile/PLM ceremonies, sprint planning, and technical reviews."
+      ],
+      "skills": [
+        "C++",
+        "Azure IoT Hub",
+        "Azure IoT Edge",
+        "Docker",
+        "CMake",
+        "Azure DevOps",
+        "MODBUS",
+        "Agile"
+      ]
+    },
+    {
+      "company": "Tata Consultancy Services",
+      "role": "System Engineer",
+      "period": "2018 – 2020",
+      "location": "Chennai, Tamilnadu, India",
+      "description": [
+        "Built and maintained web crawlers for e-commerce platforms using Python, Scrapy, BeautifulSoup, and Requests.",
+        "Ensured product attribute enrichment and data accuracy through continuous crawler updates and validation logic.",
+        "Automated reporting, validation, and internal workflows using Python scripts, improving operational efficiency.",
+        "Performed data analysis and cleaning to extract actionable insights from scraped datasets.",
+        "Collaborated with cross-functional teams to resolve data quality issues and maintain pipeline reliability."
+      ],
+      "skills": [
+        "Python",
+        "Scrapy",
+        "BeautifulSoup",
+        "Data Analysis",
+        "Process Automation"
+      ]
+    }
+  ],
+  "projects": {
+    "Web Scraping": [],
+    "Data Engineering": [],
+    "Software Development": []
+  },
+  "personalInterests": {
+    "title": "Beyond the Code",
+    "description": "When I'm not architecting data pipelines, I'm exploring new places or enjoying a good drive. Here's a glimpse into my interests outside of the tech world.",
+    "travels": {
+      "title": "My Travels",
+      "items": []
+    },
+    "cars": {
+      "title": "Cars I've Driven",
+      "items": []
+    }
+  }
+}

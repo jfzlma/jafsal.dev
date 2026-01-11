@@ -1,0 +1,267 @@
+{
+  "profile": {
+    "name": "Jafsal M A",
+    "headline": "Data Engineer | Web Scraping | IoT Enthusiast",
+    "summary": "With over 5 years of experience, I specialize in data extraction and IoT edge development. My expertise covers the full spectrum of data acquisition, from building scalable web scrapers to reverse-engineering mobile apps. I also develop C++ modules for Azure IoT Edge gateways, delivering robust, automated solutions in agile, remote environments with a focus on Python, Scrapy, and modern cloud DevOps tools.",
+    "links": {
+      "linkedIn": "https://linkedin.com/in/jfzlma",
+      "github": "https://github.com/jfzlma",
+      "email": "jfzlma@gmail.com",
+      "whatsapp": "+919633062855",
+      "instagram": "https://www.instagram.com/your_username",
+      "stackoverflow": "https://stackoverflow.com/users/your_userid",
+      "reddit": "https://www.reddit.com/user/your_username"
+    }
+  },
+  "skills": [
+    {
+      "title": "Programming & Scripting",
+      "icon": "Code",
+      "skills": [
+        "Python",
+        "C++",
+        "Golang",
+        "SQL",
+        "Bash/Shell"
+      ]
+    },
+    {
+      "title": "Web Scraping & Automation",
+      "icon": "Microscope",
+      "skills": [
+        "Scrapy",
+        "Selenium",
+        "BeautifulSoup",
+        "Requests",
+        "XPath",
+        "Appium",
+        "PlayWright"
+      ]
+    },
+    {
+      "title": "Data Engineering & Databases",
+      "icon": "Database",
+      "skills": [
+        "Pandas",
+        "Numpy",
+        "JSON",
+        "XML",
+        "Elasticsearch",
+        "Kibana",
+        "Cassandra",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "title": "Reverse Engineering & Security",
+      "icon": "ShieldCheck",
+      "skills": [
+        "Burp Suite",
+        "MitmProxy",
+        "Apktool",
+        "SSL Pinning Bypass"
+      ]
+    },
+    {
+      "title": "Cloud & IoT Platforms",
+      "icon": "Cloud",
+      "skills": [
+        "Azure IoT Hub",
+        "Azure IoT Edge",
+        "Azure DevOps",
+        "Firebase"
+      ]
+    },
+    {
+      "title": "DevOps & Tools",
+      "icon": "Cog",
+      "skills": [
+        "Docker",
+        "Jenkins",
+        "GitLab",
+        "GitHub",
+        "CI/CD",
+        "CMake",
+        "Cron"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "PST.AG",
+      "role": "Python Developer - Web scraping expert",
+      "period": "2024 – Present",
+      "location": "Weimar, Germany (Remote)",
+      "description": [
+        "Designed and implemented efficient web scraping strategies using Python, Scrapy, and Playwright.",
+        "Utilized ScrapydWeb for spider management, deployment, and monitoring.",
+        "Managed a variety of proxy services to ensure reliable and high-scale data extraction.",
+        "Contributed to internal tool and process improvement initiatives for enhanced data acquisition."
+      ],
+      "skills": [
+        "Python",
+        "Scrapy",
+        "Playwright",
+        "Selenium",
+        "Pandas",
+        "Jira",
+        "GitLab",
+        "Proxy Management"
+      ]
+    },
+    {
+      "company": "Shopalyst Technologies",
+      "role": "Software Engineer II - Data Operations and Engineering",
+      "period": "2021 – 2024",
+      "location": "Trivandrum, Kerala, India",
+      "description": [
+        "Spearheaded development of scalable spiders for global e-commerce sites using Python and Golang.",
+        "Extended data scraping to Android apps, including reverse-engineering APKs and bypassing SSL pinning.",
+        "Automated mobile app crawling using Appium, BrowserStack, and LambdaTest.",
+        "Managed proxy infrastructure and implemented data storage with Elasticsearch and Cassandra."
+      ],
+      "skills": [
+        "Python",
+        "Golang",
+        "Scrapy",
+        "Reverse Engineering",
+        "Appium",
+        "Elasticsearch",
+        "Cassandra",
+        "RabbitMQ",
+        "Burp Suite",
+        "mitmproxy"
+      ]
+    },
+    {
+      "company": "Tata Consultancy Services",
+      "role": "IoT Edge Developer",
+      "period": "2020 – 2021",
+      "location": "Kochi, Kerala, India",
+      "description": [
+        "Developed C++ Edge modules for gateways and Azure communication for a major Dutch conglomerate.",
+        "Integrated Azure IoT Hub and Azure IoT Edge services.",
+        "Implemented CI/CD pipelines for Azure deployment using Git and Azure DevOps.",
+        "Worked with industrial communication protocols like MODBUS within an Agile PLM environment."
+      ],
+      "skills": [
+        "C++",
+        "Azure IoT Hub",
+        "Azure IoT Edge",
+        "Docker",
+        "CMake",
+        "Azure DevOps",
+        "MODBUS",
+        "Agile"
+      ]
+    },
+    {
+      "company": "Tata Consultancy Services",
+      "role": "System Engineer",
+      "period": "2018 – 2020",
+      "location": "Chennai, Tamilnadu, India",
+      "description": [
+        "Scraped data from various websites with a focus on e-commerce using Python libraries.",
+        "Maintained and updated crawlers for product attribute enrichment.",
+        "Automated processes like report generation and validation using Python scripts.",
+        "Collaborated with cross-functional teams to ensure high data quality."
+      ],
+      "skills": [
+        "Python",
+        "Scrapy",
+        "BeautifulSoup",
+        "Data Analysis",
+        "Process Automation"
+      ]
+    }
+  ],
+  "projects": {
+    "Web Scraping": [
+      {
+        "projectName": "E-commerce Data Aggregator",
+        "url": "https://github.com/jfzlma",
+        "description": "A scalable web scraping solution to aggregate product data from various e-commerce websites."
+      }
+    ],
+    "Data Engineering": [
+      {
+        "projectName": "Data Pipeline for E-commerce Analytics",
+        "url": "https://github.com/jfzlma",
+        "description": "Developed a data pipeline using Python and Elasticsearch to process and analyze scraped data for market insights."
+      }
+    ],
+    "IoT": [
+      {
+        "projectName": "Structural Health Monitoring System",
+        "url": "https://www.ijraset.com/fileserve.php?FID=17620",
+        "description": "A remote system to monitor structural health of old buildings using ESP32, Raspberry Pi, and Firebase."
+      }
+    ],
+    "Software Development": [
+      {
+        "projectName": "Internal Scraping Management Tool",
+        "description": "Contributed to an internal tool for managing, deploying, and monitoring web scraping spiders.",
+        "url": "https://github.com/jfzlma"
+      }
+    ]
+  },
+  "personalInterests": {
+    "title": "Beyond the Code",
+    "description": "When I'm not architecting data pipelines, I'm exploring new places or enjoying a good drive. Here's a glimpse into my interests outside of the tech world.",
+    "travels": {
+      "title": "My Travels",
+      "items": [
+        {
+          "place": "Munnar",
+          "country": "Kerala, India",
+          "description": "Explored the beautiful tea plantations and misty hills.",
+          "imageId": "trip-photo-1",
+          "details": "Munnar is a town in the Western Ghats mountain range in India's Kerala state. A hill station and former resort for the British Raj elite, it's surrounded by rolling hills dotted with tea plantations established in the late 19th century. Eravikulam National Park, a habitat for the endangered mountain goat Nilgiri tahr, is a seasonal trekking destination. The Lakkam Waterfalls, hiking trails and 2,695m-tall Anamudi Peak are also nearby.",
+          "gallery": [
+            "trip-photo-1",
+            "trip-photo-2"
+          ],
+          "tags": [
+            "Mountains",
+            "Tea Plantations",
+            "Nature"
+          ]
+        },
+        {
+          "place": "Varkala",
+          "country": "Kerala, India",
+          "description": "Enjoyed the stunning cliff-side beaches and sunset views.",
+          "imageId": "trip-photo-3",
+          "details": "Varkala is a coastal town in the southern part of Kerala known for its unique red laterite cliffs adjacent to the Arabian Sea. It's a popular destination for those looking to relax by the beach, practice yoga, and enjoy Ayurvedic treatments. The cliff-top is lined with shops, restaurants, and guest houses, offering stunning views of the ocean.",
+          "gallery": [
+            "trip-photo-3"
+          ],
+          "tags": [
+            "Beach",
+            "Cliffs",
+            "Sunset"
+          ]
+        },
+        {
+          "place": "Gavi",
+          "country": "Kerala, India",
+          "description": "A memorable trek through the dense forest and wildlife.",
+          "imageId": "trip-photo-4",
+          "details": "Gavi is a serene and pristine forest area in the Periyar Tiger Reserve. It's an eco-tourism spot known for its rich biodiversity, offering activities like trekking, bird watching, and boating. The journey to Gavi is as beautiful as the destination, passing through lush green forests and tea plantations.",
+          "gallery": [
+            "trip-photo-4"
+          ],
+          "tags": [
+            "Forest",
+            "Trekking",
+            "Wildlife"
+          ]
+        }
+      ]
+    },
+    "cars": {
+      "title": "Cars I've Driven",
+      "items": []
+    }
+  }
+}
