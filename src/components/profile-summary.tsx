@@ -1,57 +1,99 @@
+'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import React, { useState, useEffect } from 'react';
+import { Mail, Download } from 'lucide-react';
 import portfolioData from '@/lib/portfolio-data.json';
-import profilePic from '../../public/profile.png';
-import { Download } from 'lucide-react';
-
-const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
+import { calculateExperience } from '@/lib/experience';
 
 export function ProfileSummary() {
-  const { name, headline, summary, links } = portfolioData.profile;
+  const { profile } = portfolioData;
+  const [exp, setExp] = useState(() => calculateExperience());
+
+  useEffect(() => {
+    setExp(calculateExperience());
+  }, []);
 
   return (
-    <section id="home" className="pt-8 md:pt-16">
-      <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-3">
-        <div className="order-2 md:order-1 md:col-span-2">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl lg:text-6xl">
-            {name}
-          </h1>
-          <h2 className="mt-2 font-headline text-2xl font-semibold text-accent md:text-3xl">
-            {headline}
-          </h2>
-          <p className="mt-6 max-w-2xl text-lg text-foreground/80">
-            {summary}
+    <section id="about" className="text-left space-y-6 max-w-3xl">
+      {/* Heading */}
+      <div className="space-y-3">
+        <h1 className="text-5xl sm:text-7xl font-serif font-bold tracking-tight text-foreground leading-[1.05]">
+          Jafsal <span className="text-accent italic font-normal">M A.</span>
+        </h1>
+
+        <div className="flex items-center flex-wrap gap-2.5 pt-1">
+          <p className="text-base sm:text-lg text-muted-foreground font-sans">
+            Senior Python Developer &amp; Technical Lead –{' '}
+            <strong className="text-foreground font-semibold">7+ years</strong>
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button asChild size="lg">
-              <Link href="#contact">Get In Touch</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href={links.linkedIn} target="_blank" rel="noopener noreferrer">View LinkedIn</a>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href="/jafsal_resume.pdf" target="_blank" rel="noopener noreferrer" download>
-                <Download className="mr-2 h-5 w-5" />
-                Download CV
-              </a>
-            </Button>
+          <span
+            className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/20 text-accent cursor-help"
+            title={`Career started 18 Dec 2018 (${exp.formattedFull})`}
+          >
+            {exp.formattedShort} exp
+          </span>
+        </div>
+
+        <p className="text-sm sm:text-base text-muted-foreground">
+          {profile.location} · <span className="text-accent font-medium">PST.AG (Remote)</span>
+        </p>
+      </div>
+
+      {/* About Statement */}
+      <div className="space-y-4 text-muted-foreground font-sans leading-relaxed">
+        <p className="text-base sm:text-lg text-foreground font-medium leading-relaxed">
+          {profile.about?.intro || profile.summary}
+        </p>
+
+        {profile.about?.specialisations && (
+          <div className="space-y-2 py-1">
+            <p className="text-sm sm:text-base font-semibold text-foreground">
+              {profile.about.specialisationsTitle}
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+              {profile.about.specialisations.map((spec, idx) => (
+                <li key={idx} className="flex items-start gap-2.5">
+                  <span className="text-accent font-bold shrink-0 mt-0.5 select-none">→</span>
+                  <span>{spec}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-        <div className="order-1 flex items-center justify-center md:order-2">
+        )}
 
-          <Image
-            src={profilePic}
-            alt={portfolioData.profile.name}
-            width={300}
-            height={300}
-            className="aspect-square rounded-full border-4 border-primary/10 object-cover shadow-lg"
-            priority
-          />
+        {profile.about?.recent && (
+          <p className="text-sm sm:text-base leading-relaxed">
+            {profile.about.recent}
+          </p>
+        )}
 
-        </div>
+        {profile.about?.closing && (
+          <p className="text-sm sm:text-base text-foreground/90 font-medium pt-1">
+            {profile.about.closing}
+          </p>
+        )}
+      </div>
+
+      {/* Action CTAs */}
+      <div className="flex flex-wrap items-center gap-3 pt-2">
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm transition-colors shadow-sm"
+        >
+          <Mail className="h-4 w-4" />
+          <span>Get in Touch</span>
+        </a>
+
+        <a
+          href="/jafsal_resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-card hover:bg-secondary border border-border text-foreground font-medium text-sm transition-colors"
+        >
+          <Download className="h-4 w-4 text-accent" />
+          <span>Download CV (PDF)</span>
+        </a>
       </div>
     </section>
   );

@@ -1,218 +1,283 @@
 {
   "profile": {
     "name": "Jafsal M A",
-    "headline": "Data Engineer | Web Scraping | IoT Enthusiast",
-    "summary": "Software Engineer and Technical Lead with 6+ years of experience in large-scale data extraction and ingestion, specializing in resilient web crawlers for complex e-commerce, government, and regulatory sources, with strong expertise in Python, Java, Scrapy, distributed processing, and CI/CD.",
+    "headline": "Senior Python Developer | Technical Lead | Data Engineering & Web Scraping",
+    "email": "jfzlma@gmail.com",
+    "phone": "+91-9633062855",
+    "location": "Kerala, India",
+    "summary": "I build web crawling and data pipelines at scale, turning messy, high-volume, multi-source data into reliable, structured feeds for downstream analytics. Over 7+ years specialising in large-scale scraping fleets, distributed ingestion pipelines, and agentic AI tooling.",
+    "about": {
+      "intro": "I build web crawling and data pipelines at scale, turning messy, high-volume, multi-source data into reliable, structured feeds for downstream analytics.",
+      "specialisationsTitle": "Over 7+ years I've specialised in:",
+      "specialisations": [
+        "Large-scale Scrapy/Scrapyd fleets, anti-bot evasion, and API reverse-engineering",
+        "Distributed ingestion pipelines (ArangoDB, Elasticsearch, Cassandra) with fault tolerance and schema evolution",
+        "ETL/ELT orchestration (Apache NiFi), with PySpark and Airflow in active use",
+        "Leading and mentoring engineering teams (currently leading 4) through code review, architecture, and delivery"
+      ],
+      "recent": "Most recently at PST.AG (Germany, remote), I've also been building agentic AI tooling — automation agents in the Hermes framework with MCP integration — alongside the core scraping/data engineering work.",
+      "closing": "I'm always happy to connect with people working on data extraction, anti-bot systems, or distributed data infrastructure."
+    },
     "links": {
-      "linkedIn": "https://linkedin.com/in/jfzlma",
+      "linkedIn": "https://www.linkedin.com/in/jfzlma/",
       "github": "https://github.com/jfzlma",
       "email": "jfzlma@gmail.com",
       "whatsapp": "+919633062855",
-      "instagram": "https://www.instagram.com/your_username",
-      "stackoverflow": "https://stackoverflow.com/users/your_userid",
-      "reddit": "https://www.reddit.com/user/your_username"
+      "cv": "/jafsal_resume.pdf"
     }
   },
   "skills": [
     {
-      "title": "Programming & Scripting",
-      "icon": "Code",
-      "skills": [
-        "Python",
-        "C++",
-        "Golang",
+      "category": "Data Ingestion & ETL",
+      "items": [
+        "ETL/ELT workflows",
+        "Large-scale ingestion pipelines",
+        "Workflow orchestration",
+        "Multi-source data acquisition",
+        "API reverse-engineering",
+        "Scrapy spiders",
+        "Web crawling",
+        "Anti-bot countermeasures"
+      ]
+    },
+    {
+      "category": "Agentic AI",
+      "items": [
+        "Hermes Agent framework",
+        "MCP (Model Context Protocol)",
+        "Automation agents"
+      ]
+    },
+    {
+      "category": "Actively Building",
+      "items": [
+        "PySpark",
+        "Apache Airflow",
+        "Databricks (Delta Lake, Unity Catalog)",
+        "Medallion architecture (bronze/silver/gold)",
+        "Kubernetes"
+      ]
+    },
+    {
+      "category": "Languages",
+      "items": [
+        "Python (Advanced)",
         "SQL",
-        "Bash/Shell"
+        "Java",
+        "Golang",
+        "C++",
+        "Bash"
       ]
     },
     {
-      "title": "Web Scraping & Automation",
-      "icon": "Microscope",
-      "skills": [
-        "Scrapy",
-        "Selenium",
-        "BeautifulSoup",
-        "Requests",
-        "XPath",
-        "Appium",
-        "PlayWright"
+      "category": "Infrastructure & DataOps",
+      "items": [
+        "Docker",
+        "Linux",
+        "CI/CD (GitLab, Jenkins, Azure DevOps)",
+        "Git"
       ]
     },
     {
-      "title": "Data Engineering & Databases",
-      "icon": "Database",
-      "skills": [
-        "Pandas",
-        "Numpy",
-        "JSON",
-        "XML",
-        "Elasticsearch",
-        "Kibana",
-        "Cassandra",
-        "RabbitMQ"
+      "category": "Big Data & Processing",
+      "items": [
+        "Distributed storage",
+        "Partitioning",
+        "Indexing",
+        "Schema evolution",
+        "NoSQL systems (Elasticsearch, Cassandra, ArangoDB)"
       ]
     },
     {
-      "title": "Reverse Engineering & Security",
-      "icon": "ShieldCheck",
-      "skills": [
-        "Burp Suite",
-        "MitmProxy",
-        "Apktool",
-        "SSL Pinning Bypass"
-      ]
-    },
-    {
-      "title": "Cloud & IoT Platforms",
-      "icon": "Cloud",
-      "skills": [
+      "category": "Cloud & Platforms",
+      "items": [
+        "Azure",
         "Azure IoT Hub",
         "Azure IoT Edge",
-        "Azure DevOps",
+        "Azure Data Factory (learning)",
+        "Databricks (learning)",
         "Firebase"
       ]
     },
     {
-      "title": "DevOps & Tools",
-      "icon": "Cog",
-      "skills": [
-        "Docker",
-        "Jenkins",
-        "GitLab",
-        "GitHub",
-        "CI/CD",
-        "CMake",
-        "Cron"
+      "category": "Data Governance",
+      "items": [
+        "Data lineage",
+        "Data contracts",
+        "Scenario validation",
+        "QA",
+        "PII/compliance",
+        "Logging & fault analysis",
+        "Data validation"
+      ]
+    },
+    {
+      "category": "Methodologies",
+      "items": [
+        "Agile/Scrum",
+        "System design",
+        "Code reviews",
+        "Architecture documentation",
+        "Training sessions",
+        "Project planning & execution"
+      ]
+    },
+    {
+      "category": "Web & Parsing",
+      "items": [
+        "Scrapy",
+        "BeautifulSoup",
+        "HTML",
+        "JavaScript",
+        "Regular expressions",
+        "pandas",
+        "RESTful APIs",
+        "GraphQL APIs",
+        "Time series databases"
       ]
     }
   ],
   "experience": [
     {
       "company": "PST.AG",
-      "role": "Python Developer / Team Lead – Data Engineering & Web Scraping (Remote)",
-      "period": "2024 – Present",
+      "role": "Python Developer / Team Lead – Data Engineering & Web Scraping",
+      "period": "Feb 2024 – Present",
       "location": "Weimar, Germany (Remote)",
-      "description": [
-        "Designed and maintained scalable, production-grade web scraping and data ingestion systems using Python, Scrapy, Playwright, Selenium, and BeautifulSoup across heterogeneous sources.",
-        "Architected and maintained a large-scale scraping ecosystem of ~100 active production projects, crawling 400,000+ pages daily, while ensuring fault tolerance, anti-bot resilience, and data quality.",
-        "Optimized crawler performance, stability, and fault tolerance by handling dynamic content, DOM volatility, rate limiting, and anti-bot protections.",
-        "Deployed, versioned, and monitored spiders using Scrapyd and ScrapydWeb, enabling controlled releases and operational visibility.",
-        "Managed high-volume proxy rotation strategies (Oxylabs, Proxyrack, Webshare) to maintain high crawl success rates and minimize blocking.",
-        "Ensured data quality and schema consistency through validation, normalization, error handling, and structured outputs (JSON, XML, XLSX).",
-        "Collaborated with cross-functional stakeholders to deliver custom data acquisition solutions aligned with business requirements.",
-        "Lead and mentor a team of 4 Java developers, providing technical direction, task allocation, and code reviews.",
-        "Enforced coding standards, design patterns, and best practices across Java and data-processing components.",
-        "Collaborated with architects and product owners to translate requirements into scalable system designs.",
-        "Integrated Java and Python components into CI/CD workflows using GitLab-based version control.",
-        "Participated in Agile/Scrum ceremonies and tracked delivery via Jira.",
-        "Drove continuous improvement initiatives, including POCs, tooling enhancements, and performance optimizations."
+      "bullets": [
+        "Led design and delivery of Python backend tooling powering 400K+ daily executions, improving ingestion throughput and downstream data readiness for analytics",
+        "Led the Data Operations team for one year, owning the full ETL project lifecycle — crawling, transformation, and automated delivery — with outputs delivered to clients in SAP XML, E4H XML, and other structured formats",
+        "Built and scaled ingestion pipelines across distributed storage (ArangoDB, Elasticsearch) to process high-volume multi-source feeds with fault tolerance and schema evolution support",
+        "Optimized the automated file-delivery script used to ship customer deliverables on each release, improving delivery reliability and reducing manual intervention",
+        "Implemented automated validation and scenario-based verification, increasing detected data anomalies and reducing incorrect downstream records by measurable rates",
+        "Designed and operated ETL workflows using Apache NiFi for ingestion, transformation, routing, and automated validation of heterogeneous data streams",
+        "Contributed to project planning and execution, translating client and stakeholder requirements into scoped, deliverable technical work",
+        "Completed onboarding for the company's transition into agentic AI and joined the team building automation agents on the Hermes framework, integrating MCP and Mattermost for operational communication",
+        "Led a team of 4 engineers, conducting code reviews, mentoring, and spearheading internal tooling and performance optimization POCs to raise team productivity",
+        "Maintained containerized services on Docker and Linux infrastructure, integrating releases into CI/CD pipelines for versioned rollouts and monitoring",
+        "Participated in Agile ceremonies and delivery tracking via Jira to maintain sprint velocity and transparency"
       ],
       "skills": [
         "Python",
-        "Scrapy",
-        "Playwright",
-        "Selenium",
-        "Pandas",
-        "Jira",
+        "Apache NiFi",
+        "ArangoDB",
+        "Elasticsearch",
+        "SAP XML",
+        "E4H XML",
+        "Hermes Framework",
+        "MCP",
+        "Mattermost",
+        "Docker",
+        "Linux",
         "GitLab",
-        "Proxy Management",
-        "Java",
-        "Scrapyd",
-        "NumPy",
-        "XML",
-        "ERPNext",
-        "Kettle",
-        "JBoss"
+        "Jira"
       ]
     },
     {
-      "company": "Shopalyst Technologies",
-      "role": "Software Engineer II - Data Operations and Engineering",
-      "period": "2021 – 2024",
+      "company": "Shopalyst",
+      "role": "Software Engineer II – Data Operations and Engineering",
+      "period": "Apr 2021 – Jan 2024",
       "location": "Trivandrum, Kerala, India",
-      "description": [
-        "Led development of scalable crawlers for global e-commerce platforms using Python (Scrapy, Requests, Selenium, BeautifulSoup) and Golang, supporting high-volume data ingestion.",
-        "Extended data extraction beyond the web by reverse-engineering Android applications, including SSL-pinned apps, to identify and consume internal APIs.",
-        "Used Apktool, Burp Suite, mitmproxy, and network inspection techniques to bypass SSL pinning and analyze encrypted traffic.",
-        "Automated mobile app crawling and testing pipelines using Appium, BrowserStack, and LambdaTest across emulators, real devices, and cloud environments.",
-        "Managed large-scale proxy infrastructure with Bright Data (Luminati) to support geographically distributed crawls.",
-        "Implemented data storage and messaging pipelines using Elasticsearch, Cassandra, RabbitMQ, ensuring scalability and fault tolerance.",
-        "Automated operational workflows using Bash scripting, Cron jobs, and Jenkins, reducing manual intervention and improving reliability.",
-        "Mentored junior engineers, enforced coding standards, and reviewed scraping logic to maintain data quality and system stability."
+      "bullets": [
+        "Architected Python and Golang backend systems that processed millions of records daily, improving pipeline throughput and operational reliability",
+        "Reverse-engineered Android applications to discover internal endpoints and integrate RESTful APIs into structured pipelines, using BrowserStack and LambdaTest for cross-device testing and validation",
+        "Designed and enforced automated verification pipelines and data quality checks to ensure correctness across extracted datasets",
+        "Operated distributed storage and messaging to support high-throughput workflows, using Elasticsearch, Cassandra, and RabbitMQ",
+        "Automated operational workflows with Bash, Cron, and Jenkins, reducing manual failures and deployment errors",
+        "Mentored junior engineers and maintained system stability through proactive monitoring, debugging, and incident resolution"
       ],
       "skills": [
         "Python",
         "Golang",
-        "Scrapy",
-        "Reverse Engineering",
-        "Appium",
         "Elasticsearch",
         "Cassandra",
         "RabbitMQ",
-        "Burp Suite",
-        "mitmproxy"
+        "Reverse Engineering",
+        "BrowserStack",
+        "LambdaTest",
+        "Bash",
+        "Cron",
+        "Jenkins"
       ]
     },
     {
       "company": "Tata Consultancy Services",
       "role": "IoT Edge Developer",
-      "period": "2020 – 2021",
+      "period": "Dec 2020 – Mar 2021",
       "location": "Kochi, Kerala, India",
-      "description": [
-        "Developed and maintained C++-based Azure IoT Edge modules for industrial gateways in collaboration with a European defense and shipbuilding client.",
-        "Integrated Azure IoT Hub and Azure IoT Edge for secure device-to-cloud communication.",
-        "Containerized edge workloads using Docker and built modules with CMake for cross-platform deployment.",
-        "Implemented CI/CD pipelines using Azure DevOps and Git, enabling automated builds and deployments.",
-        "Worked with industrial communication protocols (MODBUS) for real-time data acquisition from edge devices",
-        "Actively participated in Agile/PLM ceremonies, sprint planning, and technical reviews."
+      "bullets": [
+        "Architected modular C++ services for Azure IoT Edge to enable reliable, low-latency processing across distributed edge environments",
+        "Delivered Dockerized services and automated builds using Azure DevOps and Git to support continuous integration and deployment",
+        "Implemented protocol-heavy solutions with strict validation requirements to ensure compliance and system integrity in regulated environments"
       ],
       "skills": [
         "C++",
-        "Azure IoT Hub",
         "Azure IoT Edge",
         "Docker",
-        "CMake",
         "Azure DevOps",
-        "MODBUS",
-        "Agile"
+        "Git"
       ]
     },
     {
       "company": "Tata Consultancy Services",
       "role": "System Engineer",
-      "period": "2018 – 2020",
-      "location": "Chennai, Tamilnadu, India",
-      "description": [
-        "Built and maintained web crawlers for e-commerce platforms using Python, Scrapy, BeautifulSoup, and Requests.",
-        "Ensured product attribute enrichment and data accuracy through continuous crawler updates and validation logic.",
-        "Automated reporting, validation, and internal workflows using Python scripts, improving operational efficiency.",
-        "Performed data analysis and cleaning to extract actionable insights from scraped datasets.",
-        "Collaborated with cross-functional teams to resolve data quality issues and maintain pipeline reliability."
+      "period": "Dec 2018 – Nov 2020",
+      "location": "Chennai, Tamil Nadu, India",
+      "bullets": [
+        "Developed Python ETL crawlers using Scrapy and BeautifulSoup to extract, clean, and transform e-commerce data supporting downstream analytics and ML feature pipelines",
+        "Built parsing and feature-extraction logic that improved data completeness and reduced downstream cleaning effort, leveraging regular expressions and pandas for transformation",
+        "Documented crawling workflows, contributed to code review processes, and supported knowledge transfer to maintainable scraping codebases"
       ],
       "skills": [
         "Python",
         "Scrapy",
         "BeautifulSoup",
-        "Data Analysis",
-        "Process Automation"
+        "pandas",
+        "Regular Expressions",
+        "ETL"
       ]
     }
   ],
-  "projects": {
-    "Web Scraping": [],
-    "Data Engineering": [],
-    "Software Development": []
-  },
-  "personalInterests": {
-    "title": "Beyond the Code",
-    "description": "When I'm not architecting data pipelines, I'm exploring new places or enjoying a good drive. Here's a glimpse into my interests outside of the tech world.",
-    "travels": {
-      "title": "My Travels",
-      "items": []
+  "projects": [
+    {
+      "id": "structural-health-monitoring",
+      "title": "Structural Health Monitoring System",
+      "tech": ["ESP32", "Raspberry Pi", "Adafruit VL6180X", "Firebase", "Telegram Bot"],
+      "description": "Built a remote structural health monitoring system ingesting sensor streams and delivering real-time alerts via Telegram Bot.",
+      "publication": {
+        "title": "Different Approaches To Crack Monitoring of Buildings Using IoT",
+        "journal": "IJRASET Publications",
+        "date": "Aug 2018",
+        "url": "https://www.ijraset.com/fileserve.php?FID=17620"
+      }
     },
-    "cars": {
-      "title": "Cars I've Driven",
-      "items": []
+    {
+      "id": "rapid-prototyping-food-app",
+      "title": "Rapid Prototyping & AI-Assisted Tooling (Vibe Coding)",
+      "tech": ["Firebase Studio", "Antigravity"],
+      "description": "Developed a full-stack food ordering web app using rapid prototyping workflows, owning UI, backend logic, data persistence, and deployment."
+    },
+    {
+      "id": "web-applications-portfolio",
+      "title": "Web Applications Portfolio",
+      "tech": ["Web development", "UI/UX", "Responsive design"],
+      "description": "Delivered multiple responsive web applications showcasing fast prototyping, UI/UX implementation, and adaptation to AI-assisted development workflows."
     }
-  }
+  ],
+  "publication": {
+    "title": "Different Approaches To Crack Monitoring of Buildings Using IoT",
+    "journal": "IJRASET Publications",
+    "date": "Aug 2018",
+    "url": "https://www.ijraset.com/fileserve.php?FID=17620"
+  },
+  "education": {
+    "degree": "Bachelor of Technology, Computer Science and Engineering",
+    "institution": "College of Engineering, University of Calicut (NSS)",
+    "period": "Aug 2014 – Jul 2018",
+    "location": "Palakkad, Kerala, India"
+  },
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Malayalam", "proficiency": "Native" },
+    { "name": "Tamil", "proficiency": "Beginner" }
+  ]
 }
