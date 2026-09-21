@@ -1,17 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Briefcase, Calendar, MapPin, Clock } from 'lucide-react';
 import portfolioData from '@/lib/portfolio-data.json';
-import { calculateExperience } from '@/lib/experience';
 
 export function ExperienceTimeline() {
   const { experience } = portfolioData;
-  const [expDuration, setExpDuration] = useState(() => calculateExperience());
-
-  useEffect(() => {
-    setExpDuration(calculateExperience());
-  }, []);
 
   return (
     <section id="experience" className="pt-10 sm:pt-12 border-t border-border/50 space-y-6 text-left">
@@ -22,7 +16,7 @@ export function ExperienceTimeline() {
           </h2>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-xs font-mono text-accent self-start sm:self-auto">
             <Clock className="h-3.5 w-3.5" />
-            <span>{expDuration.formattedFull}</span>
+            <span>Since Dec 2018</span>
           </div>
         </div>
         <p className="text-sm sm:text-base text-muted-foreground">

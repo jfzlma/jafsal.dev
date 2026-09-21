@@ -239,6 +239,17 @@
   ],
   "projects": [
     {
+      "id": "web-crawling-fleet",
+      "title": "Large-Scale Web Crawling Fleet",
+      "tech": ["Scrapy", "Scrapyd", "Anti-bot evasion", "API reverse-engineering", "Distributed ingestion", "ArangoDB", "Elasticsearch"],
+      "description": "Production crawling fleet spanning 100+ sites across government, customs, trade, sanctions, and financial domains — including authenticated portals, dynamic JavaScript targets, and XML/structured data feeds from agencies across 30+ countries.",
+      "evidence": {
+        "title": "Source portfolio",
+        "summary": "102 crawled targets across 88 unique domains, spanning government portals, customs/trade systems, sanctions lists, and financial regulators.",
+        "url": "#crawling-fleet"
+      }
+    },
+    {
       "id": "structural-health-monitoring",
       "title": "Structural Health Monitoring System",
       "tech": ["ESP32", "Raspberry Pi", "Adafruit VL6180X", "Firebase", "Telegram Bot"],
@@ -254,13 +265,15 @@
       "id": "rapid-prototyping-food-app",
       "title": "Rapid Prototyping & AI-Assisted Tooling (Vibe Coding)",
       "tech": ["Firebase Studio", "Antigravity"],
-      "description": "Developed a full-stack food ordering web app using rapid prototyping workflows, owning UI, backend logic, data persistence, and deployment."
+      "description": "Developed a full-stack food ordering web app using rapid prototyping workflows, owning UI, backend logic, data persistence, and deployment.",
+      "note": "Showcased here as a behind-the-scenes reference for fast-prototyping workflows, not as a flagship deliverable."
     },
     {
       "id": "web-applications-portfolio",
       "title": "Web Applications Portfolio",
       "tech": ["Web development", "UI/UX", "Responsive design"],
-      "description": "Delivered multiple responsive web applications showcasing fast prototyping, UI/UX implementation, and adaptation to AI-assisted development workflows."
+      "description": "Delivered multiple responsive web applications showcasing fast prototyping, UI/UX implementation, and adaptation to AI-assisted development workflows.",
+      "note": "Supporting evidence for rapid delivery capability; kept minimal to keep focus on data engineering."
     }
   ],
   "publication": {

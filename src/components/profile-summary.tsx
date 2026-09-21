@@ -1,17 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Mail, Download } from 'lucide-react';
 import portfolioData from '@/lib/portfolio-data.json';
-import { calculateExperience } from '@/lib/experience';
 
 export function ProfileSummary() {
   const { profile } = portfolioData;
-  const [exp, setExp] = useState(() => calculateExperience());
-
-  useEffect(() => {
-    setExp(calculateExperience());
-  }, []);
 
   return (
     <section id="about" className="text-left space-y-6 max-w-3xl">
@@ -27,10 +21,10 @@ export function ProfileSummary() {
             <strong className="text-foreground font-semibold">7+ years</strong>
           </p>
           <span
-            className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/20 text-accent cursor-help"
-            title={`Career started 18 Dec 2018 (${exp.formattedFull})`}
+            className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/20 text-accent"
+            title="Career started 18 Dec 2018"
           >
-            {exp.formattedShort} exp
+            7+ yrs exp
           </span>
         </div>
 
