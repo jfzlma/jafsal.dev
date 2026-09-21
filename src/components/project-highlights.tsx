@@ -132,46 +132,149 @@ export function ProjectHighlights() {
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
           Representative sample of live targets built and maintained across government, customs, trade, sanctions,
-          and financial domains. A mix of public pages, authenticated portals, dynamic JavaScript targets, and
-          structured XML feeds.
+          and financial domains, plus large-scale e-commerce coverage across Amazon (all regions), top Indian
+          platforms, US/UK retailers, GCC marketplaces, and SE Asian marketplaces — including native mobile app
+          targets, authenticated portals, dynamic JavaScript pages, and structured XML feeds.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
-          {crawlingSample.map((u, i) => (
-            <div key={i} className="truncate bg-secondary/40 border border-border/60 rounded-md px-3 py-2">
-              <span className="text-muted-foreground/80 break-all">{u}</span>
-            </div>
-          ))}
+
+        {/* Governance / customs / trade / sanctions / financial */}
+        <div className="mb-5">
+          <div className="flex items-center gap-2 pb-2 border-b border-border/60 mb-3">
+            <FileText className="h-3.5 w-3.5 text-accent" />
+            <span className="text-xs font-medium text-foreground/90">Gov / customs / trade / sanctions / financial</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
+            {governanceSample.map((u, i) => (
+              <a
+                key={i}
+                href={u}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="truncate bg-secondary/40 border border-border/60 rounded-md px-3 py-2 hover:border-accent/40 transition-colors"
+              >
+                <span className="text-muted-foreground/80 break-all">{u}</span>
+              </a>
+            ))}
+          </div>
         </div>
-        <div className="mt-4 flex flex-wrap gap-2 text-xs text-muted-foreground">
-          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">102 targets</span>
-          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">88 unique domains</span>
+
+        {/* E-commerce */}
+        <div>
+          <div className="flex items-center gap-2 pb-2 border-b border-border/60 mb-3">
+            <ShoppingBag className="h-3.5 w-3.5 text-accent" />
+            <span className="text-xs font-medium text-foreground/90">E-commerce: Amazon · India · US/UK · GCC · SE Asia</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
+            {ecommerceSample.map((u, i) => (
+              <a
+                key={i}
+                href={u}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="truncate bg-secondary/40 border border-border/60 rounded-md px-3 py-2 hover:border-accent/40 transition-colors"
+              >
+                <span className="text-muted-foreground/80 break-all">{u}</span>
+              </a>
+            ))}
+          </div>
+          <div className="mt-3 flex flex-wrap gap-2 text-xs text-muted-foreground">
+            <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Mobile app crawling</span>
+            <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Authenticated portals</span>
+            <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Dynamic JS targets</span>
+            <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Structured XML / API feeds</span>
+          </div>
+        </div>
+
+        <div className="mt-5 flex flex-wrap gap-2 text-xs text-muted-foreground">
+          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">100+ targets across domains</span>
           <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">30+ countries</span>
           <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Gov / customs / trade / sanctions / financial</span>
+          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Amazon (all regions)</span>
+          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Indian / US / UK / GCC / SE Asia ecommerce</span>
         </div>
       </div>
     </section>
   );
 }
 
-const crawlingSample: string[] = [
-  "gov.br",
-  "customs.gov.cn",
-  "www.fbi.gov/wanted/fugitives",
-  "eservices.zatca.gov.sa",
-  "www.sec.gov",
-  "www.finma.ch",
-  "www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-  "www.trade-tariff.service.gov.uk",
-  "sanctionsmap.eu",
-  "webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content",
-  "ofac.treasury.gov/recent-actions",
-  "www.icegate.gov.in",
-  "www.customs.gov.bh/ar/tariff-finder",
-  "www.singlewindow.cn",
-  "www.kanzei.or.jp/statistical/expstatis/headline/hs1dig/e/",
-  "portal.moi.gov.qa",
-  "www.federalregister.gov/documents/search",
-  "www.pst.ag",
-  "insw.go.id",
-  "macmap.org",
+const governanceSample: string[] = [
+  "https://www.gov.br",
+  "https://customs.gov.cn",
+  "https://www.fbi.gov/wanted/fugitives",
+  "https://eservices.zatca.gov.sa",
+  "https://www.sec.gov",
+  "https://www.finma.ch",
+  "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
+  "https://www.trade-tariff.service.gov.uk",
+  "https://sanctionsmap.eu",
+  "https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content?token=nauthofs",
+  "https://ofac.treasury.gov/recent-actions",
+  "https://www.icegate.gov.in",
+  "https://www.customs.gov.bh/ar/tariff-finder",
+  "https://www.singlewindow.cn",
+  "https://www.kanzei.or.jp/statistical/expstatis/headline/hs1dig/e/",
+  "https://portal.moi.gov.qa",
+  "https://www.federalregister.gov/documents/search",
+  "https://www.pst.ag",
+  "https://www.macmap.org",
+  "https://insw.go.id",
+];
+
+const ecommerceSample: string[] = [
+  // Amazon — all regions
+  "https://www.amazon.com",
+  "https://www.amazon.co.uk",
+  "https://www.amazon.de",
+  "https://www.amazon.fr",
+  "https://www.amazon.it",
+  "https://www.amazon.es",
+  "https://www.amazon.in",
+  "https://www.amazon.co.jp",
+  "https://www.amazon.com.sg",
+  "https://www.amazon.ae",
+  "https://www.amazon.sa",
+  "https://www.amazon.com.tr",
+  "https://www.amazon.com.br",
+  "https://www.amazon.com.mx",
+  "https://www.amazon.ca",
+  "https://www.amazon.com.au",
+  "https://www.amazon.nl",
+  "https://www.amazon.se",
+  "https://www.amazon.no",
+  "https://www.amazon.pl",
+  // India — top ecommerce platforms
+  "https://www.flipkart.com",
+  "https://www.meesho.com",
+  "https://www.jio.com",
+  "https://www.myntra.com",
+  "https://www.naaptol.com",
+  "https://www.snapdeal.com",
+  "https://www.jabong.com",
+  "https://www.shopclues.com",
+  // US / UK — major retailers
+  "https://www.walmart.com",
+  "https://www.target.com",
+  "https://www.bestbuy.com",
+  "https://www.newegg.com",
+  "https://www.ebay.com",
+  "https://www.etsy.com",
+  "https://www.bookdepository.com",
+  "https://www.argos.co.uk",
+  "https://www.tesco.com",
+  "https://www.sainsburys.co.uk",
+  // GCC — marketplaces
+  "https://www.noon.com",
+  "https://www.souq.com",
+  "https://www.carrefour.ma",
+  "https://www.ajicksa.com",
+  "https://www.ecarari.com",
+  // SE Asia — marketplaces
+  "https://www.lazada.sg",
+  "https://www.lazada.co.id",
+  "https://www.lazada.com.my",
+  "https://www.shopee.sg",
+  "https://www.shopee.co.id",
+  "https://www.shopee.com.my",
+  "https://www.olx.com.ph",
+  "https://www.temu.com",
 ];

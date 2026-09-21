@@ -241,11 +241,20 @@
     {
       "id": "web-crawling-fleet",
       "title": "Large-Scale Web Crawling Fleet",
-      "tech": ["Scrapy", "Scrapyd", "Anti-bot evasion", "API reverse-engineering", "Distributed ingestion", "ArangoDB", "Elasticsearch"],
-      "description": "Production crawling fleet spanning 100+ sites across government, customs, trade, sanctions, and financial domains — including authenticated portals, dynamic JavaScript targets, and XML/structured data feeds from agencies across 30+ countries.",
+      "tech": [
+        "Scrapy",
+        "Scrapyd",
+        "Anti-bot evasion",
+        "API reverse-engineering",
+        "Mobile app crawling",
+        "Distributed ingestion",
+        "ArangoDB",
+        "Elasticsearch"
+      ],
+      "description": "Production crawling fleet spanning 100+ targets across government, customs, trade, sanctions, and financial domains, plus large-scale e-commerce coverage: Amazon across all regions, major Indian platforms, US/UK retailers, GCC marketplaces, and SE Asian marketplaces. Includes native mobile app crawling, authenticated portals, dynamic JavaScript targets, and structured XML/API feeds — with downstream storage and validation in ArangoDB and Elasticsearch.",
       "evidence": {
         "title": "Source portfolio",
-        "summary": "102 crawled targets across 88 unique domains, spanning government portals, customs/trade systems, sanctions lists, and financial regulators.",
+        "summary": "100+ crawled targets across government, customs, trade, sanctions, financial, and e-commerce domains — including Amazon (all regions), Indian platforms, US/UK retailers, GCC and SE Asian marketplaces, plus native mobile app targets.",
         "url": "#crawling-fleet"
       }
     },
