@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Activity, ShoppingBag, Globe, BookOpen, ExternalLink, Link2, FileText } from 'lucide-react';
+import { Activity, ShoppingBag, Globe, BookOpen, ExternalLink, Link2, FileText, MapPin } from 'lucide-react';
 import portfolioData from '@/lib/portfolio-data.json';
 
 const PROJECT_ICONS: Record<string, React.ReactNode> = {
@@ -30,6 +30,31 @@ function EvidenceBlock({ project }: { project: typeof portfolioData.projects[0] 
           <ExternalLink className="h-3 w-3" />
         </a>
       )}
+    </div>
+  );
+}
+
+function SampleColumn({ icon, label, items }: { icon: React.ReactNode; label: string; items: { label: string; href: string }[] }) {
+  return (
+    <div className="flex-1 min-w-0">
+      <div className="flex items-center gap-2 pb-2 border-b border-border/60 mb-3">
+        {icon}
+        <span className="text-xs font-medium text-foreground/90">{label}</span>
+      </div>
+      <ul className="space-y-1.5 text-xs">
+        {items.map((item) => (
+          <li key={item.href}>
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block truncate text-muted-foreground/80 hover:text-accent hover:underline py-1"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -130,151 +155,74 @@ export function ProjectHighlights() {
           <Activity className="h-4 w-4 text-accent" />
           <h3 className="text-sm font-semibold text-foreground">Source portfolio — crawling targets</h3>
         </div>
+
         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-          Representative sample of live targets built and maintained across government, customs, trade, sanctions,
-          and financial domains, plus large-scale e-commerce coverage across Amazon (all regions), top Indian
-          platforms, US/UK retailers, GCC marketplaces, and SE Asian marketplaces — including native mobile app
-          targets, authenticated portals, dynamic JavaScript pages, and structured XML feeds.
+          Production crawling fleet covering{' '}
+          <strong className="text-foreground/90">Amazon across all major regions</strong>, top Indian e-commerce
+          platforms, US/UK retailers, GCC marketplaces, and SE Asian marketplaces — alongside government, customs,
+          trade, sanctions, and financial targets across <strong className="text-foreground/90">30+ countries</strong>.
+          Mix of native mobile app targets, authenticated portals, dynamic JavaScript pages, and structured
+          XML/API feeds, ingested and validated in ArangoDB and Elasticsearch.
         </p>
 
-        {/* Governance / customs / trade / sanctions / financial */}
-        <div className="mb-5">
-          <div className="flex items-center gap-2 pb-2 border-b border-border/60 mb-3">
-            <FileText className="h-3.5 w-3.5 text-accent" />
-            <span className="text-xs font-medium text-foreground/90">Gov / customs / trade / sanctions / financial</span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
-            {governanceSample.map((u, i) => (
-              <a
-                key={i}
-                href={u}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="truncate bg-secondary/40 border border-border/60 rounded-md px-3 py-2 hover:border-accent/40 transition-colors"
-              >
-                <span className="text-muted-foreground/80 break-all">{u}</span>
-              </a>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-5">
+          {/* Representative examples — gov / customs / trade / sanctions / financial */}
+          <SampleColumn
+            icon={<FileText className="h-3.5 w-3.5 text-accent" />}
+            label="Gov / customs / trade / sanctions / financial"
+            items={[
+              { label: 'customs.gov.cn — China customs', href: 'https://customs.gov.cn' },
+              { label: 'webgate.ec.europa.eu — EU sanctions XML', href: 'https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content' },
+              { label: 'ofac.treasury.gov — US sanctions', href: 'https://ofac.treasury.gov/recent-actions' },
+              { label: 'icegate.gov.in — Indian customs', href: 'https://www.icegate.gov.in' },
+              { label: 'ecb.europa.eu — Euro FX reference XML', href: 'https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml' },
+            ]}
+          />
+
+          {/* Representative examples — e-commerce */}
+          <SampleColumn
+            icon={<ShoppingBag className="h-3.5 w-3.5 text-accent" />}
+            label="E-commerce: Amazon · India · US/UK · GCC · SE Asia"
+            items={[
+              { label: 'Amazon — all major regions', href: 'https://www.amazon.com' },
+              { label: 'Flipkart — India', href: 'https://www.flipkart.com' },
+              { label: 'Meesho — India', href: 'https://www.meesho.com' },
+              { label: 'Walmart / Target / Best Buy — US', href: 'https://www.walmart.com' },
+              { label: 'Noon / Souq — GCC', href: 'https://www.noon.com' },
+              { label: 'Lazada / Shopee — SE Asia', href: 'https://www.lazada.sg' },
+            ]}
+          />
         </div>
 
-        {/* E-commerce */}
-        <div>
-          <div className="flex items-center gap-2 pb-2 border-b border-border/60 mb-3">
-            <ShoppingBag className="h-3.5 w-3.5 text-accent" />
-            <span className="text-xs font-medium text-foreground/90">E-commerce: Amazon · India · US/UK · GCC · SE Asia</span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
-            {ecommerceSample.map((u, i) => (
-              <a
-                key={i}
-                href={u}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="truncate bg-secondary/40 border border-border/60 rounded-md px-3 py-2 hover:border-accent/40 transition-colors"
-              >
-                <span className="text-muted-foreground/80 break-all">{u}</span>
-              </a>
-            ))}
-          </div>
-          <div className="mt-3 flex flex-wrap gap-2 text-xs text-muted-foreground">
-            <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Mobile app crawling</span>
-            <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Authenticated portals</span>
-            <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Dynamic JS targets</span>
-            <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Structured XML / API feeds</span>
-          </div>
-        </div>
-
-        <div className="mt-5 flex flex-wrap gap-2 text-xs text-muted-foreground">
-          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">100+ targets across domains</span>
-          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">30+ countries</span>
-          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Gov / customs / trade / sanctions / financial</span>
-          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Amazon (all regions)</span>
-          <span className="px-2.5 py-1 rounded-full bg-secondary border border-border">Indian / US / UK / GCC / SE Asia ecommerce</span>
+        <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
+            <MapPin className="h-3 w-3" />
+            30+ countries
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
+            <Activity className="h-3 w-3" />
+            100+ targets across domains
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
+            Amazon (all regions)
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
+            Indian / US / UK / GCC / SE Asia ecommerce
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
+            Mobile app crawling
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
+            Authenticated portals
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
+            Dynamic JS targets
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
+            Structured XML / API feeds
+          </span>
         </div>
       </div>
     </section>
   );
 }
-
-const governanceSample: string[] = [
-  "https://www.gov.br",
-  "https://customs.gov.cn",
-  "https://www.fbi.gov/wanted/fugitives",
-  "https://eservices.zatca.gov.sa",
-  "https://www.sec.gov",
-  "https://www.finma.ch",
-  "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-  "https://www.trade-tariff.service.gov.uk",
-  "https://sanctionsmap.eu",
-  "https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content?token=nauthofs",
-  "https://ofac.treasury.gov/recent-actions",
-  "https://www.icegate.gov.in",
-  "https://www.customs.gov.bh/ar/tariff-finder",
-  "https://www.singlewindow.cn",
-  "https://www.kanzei.or.jp/statistical/expstatis/headline/hs1dig/e/",
-  "https://portal.moi.gov.qa",
-  "https://www.federalregister.gov/documents/search",
-  "https://www.pst.ag",
-  "https://www.macmap.org",
-  "https://insw.go.id",
-];
-
-const ecommerceSample: string[] = [
-  // Amazon — all regions
-  "https://www.amazon.com",
-  "https://www.amazon.co.uk",
-  "https://www.amazon.de",
-  "https://www.amazon.fr",
-  "https://www.amazon.it",
-  "https://www.amazon.es",
-  "https://www.amazon.in",
-  "https://www.amazon.co.jp",
-  "https://www.amazon.com.sg",
-  "https://www.amazon.ae",
-  "https://www.amazon.sa",
-  "https://www.amazon.com.tr",
-  "https://www.amazon.com.br",
-  "https://www.amazon.com.mx",
-  "https://www.amazon.ca",
-  "https://www.amazon.com.au",
-  "https://www.amazon.nl",
-  "https://www.amazon.se",
-  "https://www.amazon.no",
-  "https://www.amazon.pl",
-  // India — top ecommerce platforms
-  "https://www.flipkart.com",
-  "https://www.meesho.com",
-  "https://www.jio.com",
-  "https://www.myntra.com",
-  "https://www.naaptol.com",
-  "https://www.snapdeal.com",
-  "https://www.jabong.com",
-  "https://www.shopclues.com",
-  // US / UK — major retailers
-  "https://www.walmart.com",
-  "https://www.target.com",
-  "https://www.bestbuy.com",
-  "https://www.newegg.com",
-  "https://www.ebay.com",
-  "https://www.etsy.com",
-  "https://www.bookdepository.com",
-  "https://www.argos.co.uk",
-  "https://www.tesco.com",
-  "https://www.sainsburys.co.uk",
-  // GCC — marketplaces
-  "https://www.noon.com",
-  "https://www.souq.com",
-  "https://www.carrefour.ma",
-  "https://www.ajicksa.com",
-  "https://www.ecarari.com",
-  // SE Asia — marketplaces
-  "https://www.lazada.sg",
-  "https://www.lazada.co.id",
-  "https://www.lazada.com.my",
-  "https://www.shopee.sg",
-  "https://www.shopee.co.id",
-  "https://www.shopee.com.my",
-  "https://www.olx.com.ph",
-  "https://www.temu.com",
-];
