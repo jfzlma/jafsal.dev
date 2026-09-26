@@ -1,20 +1,28 @@
 'use client';
 
 import React from 'react';
-import { Bot, Database, Flame, Code, Server, Cpu, Cloud, ShieldCheck, Terminal, Users } from 'lucide-react';
+import { Bot, Bug, Database, Flame, Code, Server, Cloud, ShieldOff, Terminal, Smartphone } from 'lucide-react';
 import portfolioData from '@/lib/portfolio-data.json';
 
 const CATEGORY_ICONS: Record<string, React.ReactNode> = {
+  'Web Scraping & Crawling': <Bug className="h-4 w-4 text-accent" />,
+  'Anti-bot & Proxy Infrastructure': <ShieldOff className="h-4 w-4 text-accent" />,
+  'Reverse Engineering': <Smartphone className="h-4 w-4 text-accent" />,
   'Data Ingestion & ETL': <Database className="h-4 w-4 text-accent" />,
+  'Storage & Messaging': <Server className="h-4 w-4 text-accent" />,
+  'Languages': <Code className="h-4 w-4 text-accent" />,
+  'Infrastructure & DevOps': <Terminal className="h-4 w-4 text-accent" />,
   'Agentic AI': <Bot className="h-4 w-4 text-accent" />,
   'Actively Building': <Flame className="h-4 w-4 text-accent" />,
-  'Languages': <Code className="h-4 w-4 text-accent" />,
-  'Infrastructure & DataOps': <Cpu className="h-4 w-4 text-accent" />,
-  'Big Data & Processing': <Server className="h-4 w-4 text-accent" />,
-  'Cloud & Platforms': <Cloud className="h-4 w-4 text-accent" />,
-  'Data Governance': <ShieldCheck className="h-4 w-4 text-accent" />,
-  'Methodologies': <Users className="h-4 w-4 text-accent" />,
-  'Web & Parsing': <Terminal className="h-4 w-4 text-accent" />,
+  'Cloud & IoT': <Cloud className="h-4 w-4 text-accent" />,
+};
+
+const CATEGORY_BADGES: Record<string, string> = {
+  'Web Scraping & Crawling': 'Core',
+  'Anti-bot & Proxy Infrastructure': 'Core',
+  'Reverse Engineering': 'Core',
+  'Agentic AI': 'New',
+  'Actively Building': 'Learning',
 };
 
 export function SkillsShowcase() {
@@ -27,22 +35,20 @@ export function SkillsShowcase() {
           Technical Skills
         </h2>
         <p className="mt-1 text-sm sm:text-base text-muted-foreground">
-          Comprehensive technical capabilities, production data engineering toolsets, and active frameworks.
+          Scraping and anti-bot engineering first, then the data engineering stack that carries the output downstream.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {skills.map((cat) => {
-          const isAgenticAI = cat.category === 'Agentic AI';
-          const isActivelyBuilding = cat.category === 'Actively Building';
+          const badge = CATEGORY_BADGES[cat.category];
+          const isCore = badge === 'Core';
 
           return (
             <div
               key={cat.category}
               className={`p-5 rounded-xl bg-card border transition-colors flex flex-col justify-between ${
-                isAgenticAI || isActivelyBuilding
-                  ? 'border-accent/40 bg-card shadow-sm'
-                  : 'border-border hover:border-accent/30'
+                isCore ? 'border-accent/40 shadow-sm' : 'border-border hover:border-accent/30'
               }`}
             >
               <div>
@@ -53,14 +59,9 @@ export function SkillsShowcase() {
                       {cat.category}
                     </h3>
                   </div>
-                  {isAgenticAI && (
+                  {badge && (
                     <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
-                      Focus
-                    </span>
-                  )}
-                  {isActivelyBuilding && (
-                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
-                      Scaling
+                      {badge}
                     </span>
                   )}
                 </div>

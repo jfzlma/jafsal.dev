@@ -3,9 +3,11 @@
 import React from 'react';
 import { Mail, Download } from 'lucide-react';
 import portfolioData from '@/lib/portfolio-data.json';
+import { calculateExperience } from '@/lib/experience';
 
 export function ProfileSummary() {
   const { profile } = portfolioData;
+  const { years } = calculateExperience();
 
   return (
     <section id="about" className="text-left space-y-6 max-w-3xl">
@@ -17,14 +19,13 @@ export function ProfileSummary() {
 
         <div className="flex items-center flex-wrap gap-2.5 pt-1">
           <p className="text-base sm:text-lg text-muted-foreground font-sans">
-            Senior Python Developer &amp; Technical Lead –{' '}
-            <strong className="text-foreground font-semibold">7+ years</strong>
+            Senior Python Developer &amp; Technical Lead · Web Scraping &amp; Data Engineering
           </p>
           <span
             className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/20 text-accent"
             title="Career started 18 Dec 2018"
           >
-            7+ yrs exp
+            {years}+ yrs exp
           </span>
         </div>
 

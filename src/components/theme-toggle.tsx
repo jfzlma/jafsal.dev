@@ -14,10 +14,8 @@ export function ThemeToggle({ className = '' }: { className?: string }) {
       setTheme(stored);
       applyTheme(stored);
     } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initial = prefersDark ? 'dark' : 'dark'; // default to dark
-      setTheme(initial);
-      applyTheme(initial);
+      setTheme('dark');
+      applyTheme('dark');
     }
   }, []);
 

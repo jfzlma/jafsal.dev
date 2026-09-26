@@ -5,14 +5,15 @@
     "email": "jfzlma@gmail.com",
     "phone": "+91-9633062855",
     "location": "Kerala, India",
-    "summary": "I build web crawling and data pipelines at scale, turning messy, high-volume, multi-source data into reliable, structured feeds for downstream analytics. Over 7+ years specialising in large-scale scraping fleets, distributed ingestion pipelines, and agentic AI tooling.",
+    "summary": "I build web crawling and data pipelines at scale: ~100 production spiders crawling millions of pages a day, feeding reliable, structured data to downstream analytics. 7+ years in large-scale scraping, anti-bot engineering, mobile API reverse-engineering, and distributed ingestion.",
     "about": {
       "intro": "I build web crawling and data pipelines at scale, turning messy, high-volume, multi-source data into reliable, structured feeds for downstream analytics.",
-      "specialisationsTitle": "Over 7+ years I've specialised in:",
+      "specialisationsTitle": "What I specialise in:",
       "specialisations": [
-        "Large-scale Scrapy/Scrapyd fleets, anti-bot evasion, and API reverse-engineering",
-        "Distributed ingestion pipelines (ArangoDB, Elasticsearch, Cassandra) with fault tolerance and schema evolution",
-        "ETL/ELT orchestration (Apache NiFi), with PySpark and Airflow in active use",
+        "Running ~100 production Scrapy spiders that crawl millions of pages every day, deployed and monitored with Scrapyd and ScrapydWeb",
+        "Scraping dynamic, JavaScript-heavy and authenticated sites with Playwright and Selenium, backed by proxy rotation (Oxylabs, Bright Data, Proxyrack, Webshare), rate limiting and anti-bot handling",
+        "Reverse-engineering Android apps, including SSL-pinned ones, with Apktool, Burp Suite and mitmproxy to find and use internal APIs",
+        "Distributed ingestion and ETL (Apache NiFi, ArangoDB, Elasticsearch, Cassandra) with validation, schema evolution and client-format delivery (SAP XML, E4H XML)",
         "Leading and mentoring engineering teams (currently leading 4) through code review, architecture, and delivery"
       ],
       "recent": "Most recently at PST.AG (Germany, remote), I've also been building agentic AI tooling — automation agents in the Hermes framework with MCP integration — alongside the core scraping/data engineering work.",
@@ -28,16 +29,87 @@
   },
   "skills": [
     {
+      "category": "Web Scraping & Crawling",
+      "items": [
+        "Scrapy",
+        "Playwright",
+        "Selenium",
+        "BeautifulSoup",
+        "Requests",
+        "XPath / CSS selectors",
+        "Scrapyd & ScrapydWeb",
+        "Appium"
+      ]
+    },
+    {
+      "category": "Anti-bot & Proxy Infrastructure",
+      "items": [
+        "Proxy rotation (Oxylabs, Bright Data, Proxyrack, Webshare)",
+        "Anti-bot countermeasures",
+        "Rate limiting & retry strategies",
+        "Dynamic / JS-rendered content",
+        "DOM volatility handling",
+        "Authenticated portals"
+      ]
+    },
+    {
+      "category": "Reverse Engineering",
+      "items": [
+        "Android app reverse-engineering",
+        "SSL pinning bypass",
+        "Apktool",
+        "Burp Suite",
+        "mitmproxy",
+        "Internal API discovery",
+        "REST & GraphQL APIs"
+      ]
+    },
+    {
       "category": "Data Ingestion & ETL",
       "items": [
+        "Apache NiFi",
         "ETL/ELT workflows",
         "Large-scale ingestion pipelines",
-        "Workflow orchestration",
-        "Multi-source data acquisition",
-        "API reverse-engineering",
-        "Scrapy spiders",
-        "Web crawling",
-        "Anti-bot countermeasures"
+        "Data validation & QA",
+        "Scenario-based verification",
+        "pandas",
+        "NumPy",
+        "JSON / XML / XLSX / SAP XML / E4H XML"
+      ]
+    },
+    {
+      "category": "Storage & Messaging",
+      "items": [
+        "Elasticsearch",
+        "ArangoDB",
+        "Cassandra",
+        "RabbitMQ",
+        "Kibana",
+        "Schema evolution",
+        "Partitioning & indexing"
+      ]
+    },
+    {
+      "category": "Languages",
+      "items": [
+        "Python (Advanced)",
+        "Golang",
+        "Java",
+        "SQL",
+        "C++",
+        "Bash"
+      ]
+    },
+    {
+      "category": "Infrastructure & DevOps",
+      "items": [
+        "Docker",
+        "Linux",
+        "GitLab CI",
+        "Jenkins",
+        "Azure DevOps",
+        "Cron",
+        "Git"
       ]
     },
     {
@@ -45,7 +117,8 @@
       "items": [
         "Hermes Agent framework",
         "MCP (Model Context Protocol)",
-        "Automation agents"
+        "Automation agents",
+        "Mattermost integration"
       ]
     },
     {
@@ -54,86 +127,18 @@
         "PySpark",
         "Apache Airflow",
         "Databricks (Delta Lake, Unity Catalog)",
-        "Medallion architecture (bronze/silver/gold)",
-        "Kubernetes"
+        "Medallion architecture",
+        "Kubernetes",
+        "Azure Data Factory"
       ]
     },
     {
-      "category": "Languages",
-      "items": [
-        "Python (Advanced)",
-        "SQL",
-        "Java",
-        "Golang",
-        "C++",
-        "Bash"
-      ]
-    },
-    {
-      "category": "Infrastructure & DataOps",
-      "items": [
-        "Docker",
-        "Linux",
-        "CI/CD (GitLab, Jenkins, Azure DevOps)",
-        "Git"
-      ]
-    },
-    {
-      "category": "Big Data & Processing",
-      "items": [
-        "Distributed storage",
-        "Partitioning",
-        "Indexing",
-        "Schema evolution",
-        "NoSQL systems (Elasticsearch, Cassandra, ArangoDB)"
-      ]
-    },
-    {
-      "category": "Cloud & Platforms",
+      "category": "Cloud & IoT",
       "items": [
         "Azure",
         "Azure IoT Hub",
         "Azure IoT Edge",
-        "Azure Data Factory (learning)",
-        "Databricks (learning)",
         "Firebase"
-      ]
-    },
-    {
-      "category": "Data Governance",
-      "items": [
-        "Data lineage",
-        "Data contracts",
-        "Scenario validation",
-        "QA",
-        "PII/compliance",
-        "Logging & fault analysis",
-        "Data validation"
-      ]
-    },
-    {
-      "category": "Methodologies",
-      "items": [
-        "Agile/Scrum",
-        "System design",
-        "Code reviews",
-        "Architecture documentation",
-        "Training sessions",
-        "Project planning & execution"
-      ]
-    },
-    {
-      "category": "Web & Parsing",
-      "items": [
-        "Scrapy",
-        "BeautifulSoup",
-        "HTML",
-        "JavaScript",
-        "Regular expressions",
-        "pandas",
-        "RESTful APIs",
-        "GraphQL APIs",
-        "Time series databases"
       ]
     }
   ],
@@ -144,32 +149,29 @@
       "period": "Feb 2024 – Present",
       "location": "Weimar, Germany (Remote)",
       "bullets": [
-        "Led design and delivery of Python backend tooling powering 400K+ daily executions, improving ingestion throughput and downstream data readiness for analytics",
+        "Architected and maintained a scraping ecosystem of ~100 active production spiders crawling millions of pages daily across e-commerce, government, customs, trade and regulatory sources",
+        "Built crawlers with Scrapy, Playwright and Selenium for dynamic, JavaScript-heavy and authenticated targets, handling DOM volatility, rate limiting and anti-bot protections",
+        "Deployed, versioned and monitored spiders with Scrapyd and ScrapydWeb, and ran high-volume proxy rotation (Oxylabs, Proxyrack, Webshare) to keep crawl success rates high and blocking low",
         "Led the Data Operations team for one year, owning the full ETL project lifecycle — crawling, transformation, and automated delivery — with outputs delivered to clients in SAP XML, E4H XML, and other structured formats",
-        "Built and scaled ingestion pipelines across distributed storage (ArangoDB, Elasticsearch) to process high-volume multi-source feeds with fault tolerance and schema evolution support",
-        "Optimized the automated file-delivery script used to ship customer deliverables on each release, improving delivery reliability and reducing manual intervention",
-        "Implemented automated validation and scenario-based verification, increasing detected data anomalies and reducing incorrect downstream records by measurable rates",
-        "Designed and operated ETL workflows using Apache NiFi for ingestion, transformation, routing, and automated validation of heterogeneous data streams",
-        "Contributed to project planning and execution, translating client and stakeholder requirements into scoped, deliverable technical work",
-        "Completed onboarding for the company's transition into agentic AI and joined the team building automation agents on the Hermes framework, integrating MCP and Mattermost for operational communication",
-        "Led a team of 4 engineers, conducting code reviews, mentoring, and spearheading internal tooling and performance optimization POCs to raise team productivity",
-        "Maintained containerized services on Docker and Linux infrastructure, integrating releases into CI/CD pipelines for versioned rollouts and monitoring",
-        "Participated in Agile ceremonies and delivery tracking via Jira to maintain sprint velocity and transparency"
+        "Built ingestion pipelines on Apache NiFi, ArangoDB and Elasticsearch to process high-volume multi-source feeds with fault tolerance and schema evolution support",
+        "Implemented automated validation and scenario-based verification to catch data anomalies before they reached client deliverables",
+        "Led a team of 4 engineers, conducting code reviews, mentoring, and spearheading internal tooling and performance optimization POCs",
+        "Joined the team building automation agents on the Hermes framework as the company moved into agentic AI, integrating MCP and Mattermost for operational communication"
       ],
       "skills": [
         "Python",
+        "Scrapy",
+        "Playwright",
+        "Selenium",
+        "Scrapyd",
+        "Proxy rotation",
         "Apache NiFi",
         "ArangoDB",
         "Elasticsearch",
-        "SAP XML",
-        "E4H XML",
         "Hermes Framework",
         "MCP",
-        "Mattermost",
         "Docker",
-        "Linux",
-        "GitLab",
-        "Jira"
+        "GitLab"
       ]
     },
     {
@@ -178,24 +180,26 @@
       "period": "Apr 2021 – Jan 2024",
       "location": "Trivandrum, Kerala, India",
       "bullets": [
-        "Architected Python and Golang backend systems that processed millions of records daily, improving pipeline throughput and operational reliability",
-        "Reverse-engineered Android applications to discover internal endpoints and integrate RESTful APIs into structured pipelines, using BrowserStack and LambdaTest for cross-device testing and validation",
-        "Designed and enforced automated verification pipelines and data quality checks to ensure correctness across extracted datasets",
-        "Operated distributed storage and messaging to support high-throughput workflows, using Elasticsearch, Cassandra, and RabbitMQ",
-        "Automated operational workflows with Bash, Cron, and Jenkins, reducing manual failures and deployment errors",
-        "Mentored junior engineers and maintained system stability through proactive monitoring, debugging, and incident resolution"
+        "Led development of scalable crawlers for global e-commerce platforms in Python (Scrapy, Requests, Selenium) and Golang, processing millions of records daily",
+        "Reverse-engineered Android applications, including SSL-pinned apps, using Apktool, Burp Suite and mitmproxy to discover internal endpoints and feed their APIs into structured pipelines",
+        "Automated mobile app crawling and testing with Appium, BrowserStack and LambdaTest across emulators, real devices and cloud environments",
+        "Managed large-scale proxy infrastructure with Bright Data (Luminati) to support geographically distributed crawls",
+        "Operated distributed storage and messaging for high-throughput workflows using Elasticsearch, Cassandra, and RabbitMQ, with automated data quality checks",
+        "Automated operational workflows with Bash, Cron, and Jenkins, and mentored junior engineers on scraping logic and data quality"
       ],
       "skills": [
         "Python",
         "Golang",
+        "Scrapy",
+        "Selenium",
+        "Appium",
+        "Apktool",
+        "Burp Suite",
+        "mitmproxy",
+        "Bright Data",
         "Elasticsearch",
         "Cassandra",
         "RabbitMQ",
-        "Reverse Engineering",
-        "BrowserStack",
-        "LambdaTest",
-        "Bash",
-        "Cron",
         "Jenkins"
       ]
     },
@@ -231,6 +235,7 @@
         "Python",
         "Scrapy",
         "BeautifulSoup",
+        "Requests",
         "pandas",
         "Regular Expressions",
         "ETL"
@@ -243,25 +248,55 @@
       "title": "Large-Scale Web Crawling Fleet",
       "tech": [
         "Scrapy",
+        "Playwright",
+        "Selenium",
         "Scrapyd",
-        "Anti-bot evasion",
-        "API reverse-engineering",
-        "Mobile app crawling",
-        "Distributed ingestion",
+        "Proxy rotation",
+        "Mobile API reverse-engineering",
+        "Apache NiFi",
         "ArangoDB",
         "Elasticsearch"
       ],
-      "description": "Production crawling fleet spanning 100+ targets across government, customs, trade, sanctions, and financial domains, plus large-scale e-commerce coverage: Amazon across all regions, major Indian platforms, US/UK retailers, GCC marketplaces, and SE Asian marketplaces. Includes native mobile app crawling, authenticated portals, dynamic JavaScript targets, and structured XML/API feeds — with downstream storage and validation in ArangoDB and Elasticsearch.",
-      "evidence": {
-        "title": "Source portfolio",
-        "summary": "100+ crawled targets across government, customs, trade, sanctions, financial, and e-commerce domains — including Amazon (all regions), Indian platforms, US/UK retailers, GCC and SE Asian marketplaces, plus native mobile app targets.",
-        "url": "#crawling-fleet"
-      }
+      "description": "A production fleet of ~100 spiders crawling millions of pages a day, covering government, customs, trade, sanctions, financial and regulatory sources alongside large-scale e-commerce across India, the US/UK, the GCC and Southeast Asia. Output is validated and ingested into ArangoDB and Elasticsearch, then delivered to clients as structured feeds.",
+      "stats": [
+        {
+          "value": "~100",
+          "label": "production spiders"
+        },
+        {
+          "value": "2M+",
+          "label": "pages crawled daily"
+        },
+        {
+          "value": "30+",
+          "label": "countries covered"
+        }
+      ],
+      "sources": [
+        "Government & customs portals",
+        "Trade, sanctions & regulatory lists",
+        "Financial & FX reference feeds",
+        "Global e-commerce marketplaces",
+        "Native mobile apps"
+      ],
+      "techniques": [
+        "JS rendering with Playwright & Selenium",
+        "Proxy rotation & anti-bot handling",
+        "SSL-pinned app & private API reverse-engineering",
+        "Authenticated sessions & structured XML/API feeds",
+        "Scrapyd deployment, versioning & monitoring"
+      ]
     },
     {
       "id": "structural-health-monitoring",
       "title": "Structural Health Monitoring System",
-      "tech": ["ESP32", "Raspberry Pi", "Adafruit VL6180X", "Firebase", "Telegram Bot"],
+      "tech": [
+        "ESP32",
+        "Raspberry Pi",
+        "Adafruit VL6180X",
+        "Firebase",
+        "Telegram Bot"
+      ],
       "description": "Built a remote structural health monitoring system ingesting sensor streams and delivering real-time alerts via Telegram Bot.",
       "publication": {
         "title": "Different Approaches To Crack Monitoring of Buildings Using IoT",
@@ -273,16 +308,21 @@
     {
       "id": "rapid-prototyping-food-app",
       "title": "Rapid Prototyping & AI-Assisted Tooling (Vibe Coding)",
-      "tech": ["Firebase Studio", "Antigravity"],
-      "description": "Developed a full-stack food ordering web app using rapid prototyping workflows, owning UI, backend logic, data persistence, and deployment.",
-      "note": "Showcased here as a behind-the-scenes reference for fast-prototyping workflows, not as a flagship deliverable."
+      "tech": [
+        "Firebase Studio",
+        "Antigravity"
+      ],
+      "description": "Developed a full-stack food ordering web app using rapid prototyping workflows, owning UI, backend logic, data persistence, and deployment."
     },
     {
       "id": "web-applications-portfolio",
       "title": "Web Applications Portfolio",
-      "tech": ["Web development", "UI/UX", "Responsive design"],
-      "description": "Delivered multiple responsive web applications showcasing fast prototyping, UI/UX implementation, and adaptation to AI-assisted development workflows.",
-      "note": "Supporting evidence for rapid delivery capability; kept minimal to keep focus on data engineering."
+      "tech": [
+        "Web development",
+        "UI/UX",
+        "Responsive design"
+      ],
+      "description": "Delivered multiple responsive web applications showcasing fast prototyping, UI/UX implementation, and adaptation to AI-assisted development workflows."
     }
   ],
   "publication": {
@@ -298,8 +338,17 @@
     "location": "Palakkad, Kerala, India"
   },
   "languages": [
-    { "name": "English", "proficiency": "Fluent" },
-    { "name": "Malayalam", "proficiency": "Native" },
-    { "name": "Tamil", "proficiency": "Beginner" }
+    {
+      "name": "English",
+      "proficiency": "Fluent"
+    },
+    {
+      "name": "Malayalam",
+      "proficiency": "Native"
+    },
+    {
+      "name": "Tamil",
+      "proficiency": "Beginner"
+    }
   ]
 }

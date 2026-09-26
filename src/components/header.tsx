@@ -5,12 +5,32 @@ import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import portfolioData from '@/lib/portfolio-data.json';
 import { ThemeToggle } from '@/components/theme-toggle';
 
+const NAV_LINKS = [
+  { href: '#experience', label: 'Experience' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' },
+];
+
 export function Header() {
   const { profile } = portfolioData;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 h-12 sm:h-14 flex items-center justify-end">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 h-12 sm:h-14 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-6 min-w-0">
+          <a href="#about" className="font-serif font-bold text-base sm:text-lg text-foreground whitespace-nowrap">
+            Jafsal <span className="text-accent italic font-normal">M A</span>
+          </a>
+          <nav className="hidden md:flex items-center gap-4 text-sm text-muted-foreground">
+            {NAV_LINKS.map((link) => (
+              <a key={link.href} href={link.href} className="hover:text-accent transition-colors">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+
         {/* Social Links & Controls */}
         <div className="flex items-center gap-1.5 sm:gap-2.5">
           <a

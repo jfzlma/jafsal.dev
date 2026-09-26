@@ -23,11 +23,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jafsal.dev'),
+  alternates: { canonical: '/' },
   title: `${portfolioData.profile.name} — ${portfolioData.profile.headline}`,
   description: portfolioData.profile.summary,
   authors: [{ name: portfolioData.profile.name, url: 'https://jafsal.dev' }],
   openGraph: {
-    title: `${portfolioData.profile.name} | Senior Python Developer & Tech Lead`,
+    title: `${portfolioData.profile.name} | Senior Python Developer & Web Scraping Lead`,
     description: portfolioData.profile.summary,
     url: 'https://jafsal.dev',
     siteName: 'jafsal.dev',

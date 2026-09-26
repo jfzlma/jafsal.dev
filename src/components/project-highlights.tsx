@@ -1,57 +1,50 @@
 'use client';
 
 import React from 'react';
-import { Activity, ShoppingBag, Globe, BookOpen, ExternalLink, Link2, FileText, MapPin } from 'lucide-react';
+import { Activity, ShoppingBag, Globe, BookOpen, ExternalLink, Bug, Database, Wrench } from 'lucide-react';
 import portfolioData from '@/lib/portfolio-data.json';
+
+type Project = (typeof portfolioData.projects)[number] & {
+  stats?: { value: string; label: string }[];
+  sources?: string[];
+  techniques?: string[];
+  publication?: { title: string; journal: string; date: string; url?: string };
+};
 
 const PROJECT_ICONS: Record<string, React.ReactNode> = {
   'structural-health-monitoring': <Activity className="h-5 w-5 text-accent" />,
   'rapid-prototyping-food-app': <ShoppingBag className="h-5 w-5 text-accent" />,
   'web-applications-portfolio': <Globe className="h-5 w-5 text-accent" />,
-  'web-crawling-fleet': <Activity className="h-5 w-5 text-accent" />,
+  'web-crawling-fleet': <Bug className="h-5 w-5 text-accent" />,
 };
 
-function EvidenceBlock({ project }: { project: typeof portfolioData.projects[0] }) {
-  if (!project.evidence) return null;
-  const ev = project.evidence;
+function TechTags({ tech }: { tech: string[] }) {
   return (
-    <div className="p-3 rounded-lg bg-secondary/60 border border-border text-xs space-y-1.5">
-      <div className="flex items-center gap-1.5 font-semibold text-accent">
-        <Link2 className="h-3.5 w-3.5" />
-        <span>{ev.title}</span>
-      </div>
-      <p className="text-muted-foreground">{ev.summary}</p>
-      {ev.url && (
-        <a
-          href={ev.url}
-          className="text-accent hover:underline inline-flex items-center gap-1 font-medium"
+    <div className="pt-3 border-t border-border/60 flex flex-wrap gap-1.5">
+      {tech.map((t) => (
+        <span
+          key={t}
+          className="text-xs px-2.5 py-1 rounded-md bg-secondary text-muted-foreground border border-border"
         >
-          <span>View section</span>
-          <ExternalLink className="h-3 w-3" />
-        </a>
-      )}
+          {t}
+        </span>
+      ))}
     </div>
   );
 }
 
-function SampleColumn({ icon, label, items }: { icon: React.ReactNode; label: string; items: { label: string; href: string }[] }) {
+function ListColumn({ icon, label, items }: { icon: React.ReactNode; label: string; items: string[] }) {
   return (
-    <div className="flex-1 min-w-0">
+    <div className="min-w-0">
       <div className="flex items-center gap-2 pb-2 border-b border-border/60 mb-3">
         {icon}
-        <span className="text-xs font-medium text-foreground/90">{label}</span>
+        <span className="text-xs font-semibold text-foreground/90 uppercase tracking-wider">{label}</span>
       </div>
-      <ul className="space-y-1.5 text-xs">
+      <ul className="space-y-1.5 text-sm text-muted-foreground">
         {items.map((item) => (
-          <li key={item.href}>
-            <a
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block truncate text-muted-foreground/80 hover:text-accent hover:underline py-1"
-            >
-              {item.label}
-            </a>
+          <li key={item} className="flex items-start gap-2">
+            <span className="text-accent select-none">→</span>
+            <span>{item}</span>
           </li>
         ))}
       </ul>
@@ -59,16 +52,61 @@ function SampleColumn({ icon, label, items }: { icon: React.ReactNode; label: st
   );
 }
 
-export function ProjectHighlights() {
-  const { projects } = portfolioData;
+function FlagshipProject({ project }: { project: Project }) {
+  return (
+    <article
+      id="crawling-fleet"
+      className="md:col-span-3 p-6 sm:p-7 rounded-xl bg-card border border-accent/40 space-y-5"
+    >
+      <div className="flex items-center gap-3 flex-wrap">
+        <div className="p-2.5 rounded-lg bg-secondary border border-border">
+          {PROJECT_ICONS[project.id]}
+        </div>
+        <h3 className="text-lg sm:text-xl font-bold text-foreground leading-snug">{project.title}</h3>
+        <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
+          Flagship
+        </span>
+      </div>
 
-  // Order: flagship first, then the rest
-  const ordered = [
-    projects.find((p) => p.id === 'web-crawling-fleet'),
-    projects.find((p) => p.id === 'structural-health-monitoring'),
-    projects.find((p) => p.id === 'rapid-prototyping-food-app'),
-    projects.find((p) => p.id === 'web-applications-portfolio'),
-  ].filter(Boolean);
+      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{project.description}</p>
+
+      {project.stats && (
+        <div className="grid grid-cols-3 gap-3">
+          {project.stats.map((s) => (
+            <div key={s.label} className="p-3 sm:p-4 rounded-lg bg-secondary/60 border border-border text-center">
+              <div className="text-xl sm:text-2xl font-bold font-mono text-accent">{s.value}</div>
+              <div className="text-[11px] sm:text-xs text-muted-foreground mt-1">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {project.sources && (
+          <ListColumn
+            icon={<Database className="h-3.5 w-3.5 text-accent" />}
+            label="Source categories"
+            items={project.sources}
+          />
+        )}
+        {project.techniques && (
+          <ListColumn
+            icon={<Wrench className="h-3.5 w-3.5 text-accent" />}
+            label="Techniques"
+            items={project.techniques}
+          />
+        )}
+      </div>
+
+      <TechTags tech={project.tech} />
+    </article>
+  );
+}
+
+export function ProjectHighlights() {
+  const projects = portfolioData.projects as Project[];
+  const flagship = projects.find((p) => p.id === 'web-crawling-fleet');
+  const others = projects.filter((p) => p.id !== 'web-crawling-fleet');
 
   return (
     <section id="projects" className="pt-10 sm:pt-12 border-t border-border/50 space-y-6 text-left">
@@ -77,40 +115,42 @@ export function ProjectHighlights() {
           Projects
         </h2>
         <p className="mt-1 text-sm sm:text-base text-muted-foreground">
-          Systems and applications highlighting IoT data ingestion, rapid prototyping workflows, and full-stack solutions.
+          A production crawling fleet, plus earlier IoT research and web prototyping work.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {ordered.map((project) => (
+        {flagship && <FlagshipProject project={flagship} />}
+
+        {others.map((project) => (
           <article
-            key={project!.id}
+            key={project.id}
             className="p-6 rounded-xl bg-card border border-border flex flex-col justify-between space-y-4 hover:border-accent/40 transition-colors"
           >
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-secondary border border-border">
-                  {PROJECT_ICONS[project!.id] || <Activity className="h-5 w-5 text-accent" />}
+                  {PROJECT_ICONS[project.id] || <Activity className="h-5 w-5 text-accent" />}
                 </div>
                 <h3 className="text-lg font-bold text-foreground leading-snug">
-                  {project!.title}
+                  {project.title}
                 </h3>
               </div>
 
               <p className="text-sm text-muted-foreground leading-relaxed">
-                {project!.description}
+                {project.description}
               </p>
 
-              {project!.publication && (
+              {project.publication && (
                 <div className="p-3 rounded-lg bg-secondary/60 border border-border text-xs space-y-1.5">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1.5 font-semibold text-accent">
                       <BookOpen className="h-3.5 w-3.5" />
                       <span>Research Paper</span>
                     </div>
-                    {project!.publication.url && (
+                    {project.publication.url && (
                       <a
-                        href={project!.publication.url}
+                        href={project.publication.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-accent hover:underline inline-flex items-center gap-1 font-medium"
@@ -121,107 +161,15 @@ export function ProjectHighlights() {
                     )}
                   </div>
                   <p className="text-muted-foreground">
-                    &quot;{project!.publication.title}&quot; — {project!.publication.journal} ({project!.publication.date})
+                    &quot;{project.publication.title}&quot; — {project.publication.journal} ({project.publication.date})
                   </p>
                 </div>
               )}
-
-              <EvidenceBlock project={project!} />
-
-              {project!.note && (
-                <div className="p-3 rounded-lg bg-accent/5 border border-border/60 text-xs text-muted-foreground leading-relaxed">
-                  <span className="font-medium text-foreground/80">Note.</span> {project!.note}
-                </div>
-              )}
             </div>
 
-            <div className="pt-3 border-t border-border/60 flex flex-wrap gap-1.5">
-              {project!.tech.map((t) => (
-                <span
-                  key={t}
-                  className="text-xs px-2.5 py-1 rounded-md bg-secondary text-muted-foreground border border-border"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
+            <TechTags tech={project.tech} />
           </article>
         ))}
-      </div>
-
-      {/* Crawling fleet evidence panel */}
-      <div id="crawling-fleet" className="mt-6 p-6 rounded-xl bg-card border border-border text-left">
-        <div className="flex items-center gap-2 pb-3 border-b border-border/60">
-          <Activity className="h-4 w-4 text-accent" />
-          <h3 className="text-sm font-semibold text-foreground">Source portfolio — crawling targets</h3>
-        </div>
-
-        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-          Production crawling fleet covering{' '}
-          <strong className="text-foreground/90">Amazon across all major regions</strong>, top Indian e-commerce
-          platforms, US/UK retailers, GCC marketplaces, and SE Asian marketplaces — alongside government, customs,
-          trade, sanctions, and financial targets across <strong className="text-foreground/90">30+ countries</strong>.
-          Mix of native mobile app targets, authenticated portals, dynamic JavaScript pages, and structured
-          XML/API feeds, ingested and validated in ArangoDB and Elasticsearch.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-5">
-          {/* Representative examples — gov / customs / trade / sanctions / financial */}
-          <SampleColumn
-            icon={<FileText className="h-3.5 w-3.5 text-accent" />}
-            label="Gov / customs / trade / sanctions / financial"
-            items={[
-              { label: 'customs.gov.cn — China customs', href: 'https://customs.gov.cn' },
-              { label: 'webgate.ec.europa.eu — EU sanctions XML', href: 'https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content' },
-              { label: 'ofac.treasury.gov — US sanctions', href: 'https://ofac.treasury.gov/recent-actions' },
-              { label: 'icegate.gov.in — Indian customs', href: 'https://www.icegate.gov.in' },
-              { label: 'ecb.europa.eu — Euro FX reference XML', href: 'https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml' },
-            ]}
-          />
-
-          {/* Representative examples — e-commerce */}
-          <SampleColumn
-            icon={<ShoppingBag className="h-3.5 w-3.5 text-accent" />}
-            label="E-commerce: Amazon · India · US/UK · GCC · SE Asia"
-            items={[
-              { label: 'Amazon — all major regions', href: 'https://www.amazon.com' },
-              { label: 'Flipkart — India', href: 'https://www.flipkart.com' },
-              { label: 'Meesho — India', href: 'https://www.meesho.com' },
-              { label: 'Walmart / Target / Best Buy — US', href: 'https://www.walmart.com' },
-              { label: 'Noon / Souq — GCC', href: 'https://www.noon.com' },
-              { label: 'Lazada / Shopee — SE Asia', href: 'https://www.lazada.sg' },
-            ]}
-          />
-        </div>
-
-        <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
-            <MapPin className="h-3 w-3" />
-            30+ countries
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
-            <Activity className="h-3 w-3" />
-            100+ targets across domains
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
-            Amazon (all regions)
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
-            Indian / US / UK / GCC / SE Asia ecommerce
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
-            Mobile app crawling
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
-            Authenticated portals
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
-            Dynamic JS targets
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary border border-border">
-            Structured XML / API feeds
-          </span>
-        </div>
       </div>
     </section>
   );
